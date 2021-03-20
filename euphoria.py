@@ -1,6 +1,9 @@
 import os, sys, time, re
-from pyngrok import ngrok
-
+try:
+	from pyngrok import ngrok
+except:
+	os.system('pip3 install pyngrok')
+	from pyngrok import ngrok
 
 def check():
 	pattern = r'IP:'
